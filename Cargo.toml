@@ -1,0 +1,12 @@
+[package]
+name = "byd-metadata-dumper"
+version = "1.0.0"
+edition = "2024"
+
+[dependencies]
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+panic = "abort"
