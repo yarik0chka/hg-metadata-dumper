@@ -25,16 +25,16 @@ impl Args {
             println!("  [INPUT]     Input PE file path (default: GameAssembly.dll)");
             println!("  [OUTPUT]    Output decrypted file path (default: global-metadata.dat)");
             println!("\nOptions:");
-            println!("  --verbose   Show detailed metadata info");
+            println!("  -v, --verbose  Show detailed metadata info");
             println!("  -h, --help  Show this help message");
             std::process::exit(0);
         }
 
-        let verbose = args.iter().any(|arg| arg == "--verbose");
+        let verbose = args.iter().any(|arg| arg == "--verbose" || arg == "-v");
         let positional: Vec<&String> = args
             .iter()
             .skip(1)
-            .filter(|arg| !arg.starts_with("--"))
+            .filter(|arg| !arg.starts_with("--") && *arg != "-v" && *arg != "-h")
             .collect();
 
         let input = positional
