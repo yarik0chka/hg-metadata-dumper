@@ -84,7 +84,6 @@ fn decrypt_uint32(v: &mut [u32], k: &[u32]) {
         let e = (sum_value >> 2) & 3;
 
         for p in (1..=n).rev() {
-            // p goes n down to 1
             let z = v[p - 1];
             let mx_val = mx(sum_value, y, z, p, e, k);
             v[p] = v[p].wrapping_sub(mx_val);
