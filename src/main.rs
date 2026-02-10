@@ -60,7 +60,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
     let data = extractor.get_valid_data();
     println!("✓ Extracted encrypted data from {}", args.input);
-    println!("  Data size: {}", fmt_size(data.len()));
     println!();
 
     let key = {
