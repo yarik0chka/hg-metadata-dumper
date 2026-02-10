@@ -1,13 +1,17 @@
 # BYD Metadata Dumper
 
-Dumps `global-metadata.dat` for game, written in rust.
+Dumps `global-metadata.dat` for hg games, written in rust.
 
 ## Usage
 
 ```bash
-Usage: byd-metadata-dumper [INPUT] [OUTPUT]
+Usage: byd-metadata-dumper [OPTIONS] [INPUT] [OUTPUT]
 
 Arguments:
-  [INPUT]   Input PE file path (default: GameAssembly.dll)
-  [OUTPUT]  Output decrypted file path (default: global-metadata.dat)
+  [INPUT]     Input PE file path (default: GameAssembly.dll)
+  [OUTPUT]    Output decrypted file path (default: global-metadata.dat)
+
+Options:
+  -v, --verbose  Show detailed metadata info
+  -h, --help  Show this help message
 ```
