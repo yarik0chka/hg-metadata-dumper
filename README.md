@@ -5,13 +5,14 @@ Dumps `global-metadata.dat` for hg games, written in rust.
 ## Usage
 
 ```bash
-Usage: byd-metadata-dumper [OPTIONS] [INPUT] [OUTPUT]
+Usage: hg-metadata-dumper [OPTIONS] [INPUT] [OUTPUT]
 
 Arguments:
   [INPUT]     Input PE file path (default: GameAssembly.dll)
   [OUTPUT]    Output decrypted file path (default: global-metadata.dat)
 
 Options:
+  -d, --decrypt-strings  Decrypt string literals
   -v, --verbose  Show detailed metadata info
   -h, --help  Show this help message
 ```
